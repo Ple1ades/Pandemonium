@@ -5,9 +5,21 @@
 #include <cmath>
 // https://github.com/Auburn/FastNoiseLite/blob/master/Cpp/README.md
 #include <FastNoiseLite/FastNoiseLite.h>
+#include <string>
+#include <SDL.h>
+#include <map>
+#include <vector>
+#include <variant>
 
 #define CLAMP(x, upper, lower) (std::max(upper, std::min(x, lower)))
 
+constexpr static const int32_t g_kWindowWidth             = 1920;
+constexpr static const int32_t g_kWindowHeight            = 1080;
+constexpr static const int32_t g_kRenderWidth             = g_kWindowWidth / 2;
+constexpr static const int32_t g_kRenderHeight            = g_kWindowHeight / 2;
+constexpr static const int32_t g_kRenderDeviceFlags       = -1;
+constexpr static const int32_t g_kErrorOccurred           = -1;
+constexpr static const char* g_kWindowTitle =             "PixelPusher";
 
 int32_t e(int32_t result, std::string errorMessage)
 {

@@ -5,6 +5,7 @@
 #include <cmath>
 // https://github.com/Auburn/FastNoiseLite/blob/master/Cpp/README.md
 #include <FastNoiseLite/FastNoiseLite.h>
+#include <box2d/box2d.h>
 #include <string>
 #include <SDL.h>
 #include <map>
@@ -19,7 +20,12 @@ constexpr static const int32_t g_kRenderWidth             = g_kWindowWidth / 2;
 constexpr static const int32_t g_kRenderHeight            = g_kWindowHeight / 2;
 constexpr static const int32_t g_kRenderDeviceFlags       = -1;
 constexpr static const int32_t g_kErrorOccurred           = -1;
+constexpr static const int32_t g_kVelocityIterations      = 6;
+constexpr static const int32_t g_kPositionIterations      = 2;
+
 constexpr static const char* g_kWindowTitle =             "PixelPusher";
+
+
 
 int32_t e(int32_t result, std::string errorMessage)
 {
@@ -55,3 +61,23 @@ inline uint32_t FastRand(void)
 
     return s_randZ;
 }
+
+class Vector3{
+    public:
+    int x;
+    int y;
+    int z;
+
+    Vector3(){
+
+    }
+    Vector3(int _x, int _y){
+        x = _x;
+        y = _y;
+    }
+    Vector3(int _x, int _y, int _z){
+        x = _x;
+        y = _y;
+        z = _z;
+    }
+};

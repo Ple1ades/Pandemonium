@@ -2,7 +2,7 @@
 #include "MapGen.cpp"
 #include "Render.cpp"
 #include "UI.cpp"
-#include "Isometric.cpp"
+#include "Physics.cpp"
 #undef main
 
 #include "Utilities.h"
@@ -77,15 +77,36 @@ int main()
     uint32_t * pixelBuffer;
     pixelBuffer = (uint32_t *)malloc(g_kRenderHeight * g_kRenderWidth * sizeof(uint32_t));
 
-    MapGen map = MapGen(0, g_kRenderWidth, g_kRenderHeight, 3, 2.5f, 0.2f);
-    
-    int i = 0;
-    int j = 0;
     int mouseX = 0;
     int mouseY = 0;
-    int mouseChunkX = 0;
-    int mouseChunkY = 0;
-    float pos = 1;
+
+    
+
+    b2Vec2 Gravity(0.0f, 9.8f);
+    b2World World(Gravity);
+    b2BodyDef groundBodyDef;
+    groundBodyDef.position.Set(0.0f, -10.0f);
+    b2Body* groundBody = World.CreateBody(&groundBodyDef);
+    b2PolygonShape groundBox;
+    groundBox.SetAsBox(50.0f, 10.0f);
+    groundBody -> CreateFixture(&groundBox, 0.0f);
+
+    b2BodyDef bodyDef;
+    bodyDef.type = b2_dynamicBody;
+    bodyDef.position.Set(0.0f, 4.0f);
+    b2Body* body = World.CreateBody(&bodyDef);
+    b2PolygonShape dynamicBox;
+    dynamicBox.SetAsBox(1.0f, 1.0f);
+    b2FixtureDef fixtureDef;
+    fixtureDef.shape = &dynamicBox;
+    fixtureDef.density = 1.0f;
+    fixtureDef.friction = 0.3f;
+    body -> CreateFixture(&fixtureDef);
+
+    // Time
+    Uint64 NOW = SDL_GetPerformanceCounter();
+    Uint64 LAST = 0;
+    double deltaTime = 0;
 
     while (running)
     {
@@ -93,40 +114,32 @@ int main()
         {
             lastTick = SDL_GetPerformanceCounter();
             firstFrame = false;
-            // for (int y = 0; y < g_kRenderHeight; y ++){
-            //     for (int x = 0; x < g_kRenderWidth; x ++){
-            //         // if (CLAMP((int)(map.index[y * g_kRenderWidth + x] * 128 + 128), 0, 255) > 170){
-            //         //     pixelBuffer[y * g_kRenderWidth + x] = ARGB(0, 0, 0, 255);
-            //         // }
-            //         // else{
-            //         //     pixelBuffer[y * g_kRenderWidth + x] = ARGB(255, 255, 255, 255);
-            //         // }
-            //         pixelBuffer[y * g_kRenderWidth + x] = ARGB(CLAMP((int)(map.index[y * g_kRenderWidth + x] * 128 + 128), 0, 255), CLAMP((int)(map.index[y * g_kRenderWidth + x] * 128 + 128), 0, 255), CLAMP((int)(map.index[y * g_kRenderWidth + x] * 128 + 128), 0, 255), 255);
-            //     }
-            // }
             // Sprites
-            mainUI.addSprite("ISO-test", "sprites/iso-test.bmp", pWindow, pRenderer);
+            mainUI.addSprite("ISO-test", "Assets/sprites/iso-test.bmp", pWindow, pRenderer);
         }
         else
         {
-            SDL_RenderClear(pRenderer);
-            // if (e(Render::RenderTexture(pWindow, pRenderer, pTexture, pixelBuffer), "Render failed\n")) break;
-            pos +=0.5f;
-            for (int x = 0; x < g_kRenderHeight/4; ++x){
-                for (int y = 0; y < g_kRenderHeight/4; ++ y){
-                    Isometric::ConvertToIsometricCoord(x, y, &i, &j, 32, 32);
-                    mainUI.drawSprite("ISO-test", i + g_kRenderWidth - 16 , j - g_kRenderHeight + 16 + map.getNoise(x * 4 + pos, y * 4) * 512, pRenderer);
-                }
-            }
-            SDL_RenderPresent(pRenderer);
-
+            // Animation update
+            // Physics update
+            // Input
             running = ProcessInput(&mouseX, &mouseY);
-            Isometric::ConvertFromIsometricCoord(mouseX, mouseY, &mouseChunkX, &mouseChunkY, 32, 32);
+            // Gamelogic
 
+            // Time
             uint64_t currentTick = SDL_GetPerformanceCounter();
             totalTicks += currentTick - lastTick;
             lastTick = currentTick;
             ++totalFramesRendered;
+
+            LAST = NOW;
+            NOW = SDL_GetPerformanceCounter();
+            deltaTime = (double)((NOW - LAST)*1000 / (double)SDL_GetPerformanceFrequency() );
+
+            // Rendering
+            SDL_RenderClear(pRenderer);
+            SDL_RenderPresent(pRenderer);
+            
+
         }
     }
   

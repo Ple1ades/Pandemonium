@@ -24,9 +24,9 @@ namespace Render{
     static SDL_Renderer* CreateRenderer(SDL_Window* pWindow, bool hardwareAccelerated)
     {
         if (hardwareAccelerated)
-            return SDL_CreateRenderer(pWindow, g_kRenderDeviceFlags, SDL_RENDERER_ACCELERATED);
+            return SDL_CreateRenderer(pWindow, g_kRenderDeviceFlags, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC );
         else
-            return SDL_CreateRenderer(pWindow, g_kRenderDeviceFlags, SDL_RENDERER_SOFTWARE);
+            return SDL_CreateRenderer(pWindow, g_kRenderDeviceFlags, SDL_RENDERER_SOFTWARE | SDL_RENDERER_PRESENTVSYNC );
     }
 
     // Create an SDL Texture to use as a "back buffer"

@@ -15,7 +15,7 @@ namespace Render{
         SDL_Window* pWindow = SDL_CreateWindow(g_kWindowTitle, x, y, width, height,
             SDL_WINDOW_ALLOW_HIGHDPI);
 
-        if (e(!pWindow, "Failed to create Window\n"));
+        (e(!pWindow, "Failed to create Window\n"));
 
         return pWindow;
     }
@@ -35,7 +35,7 @@ namespace Render{
         SDL_Texture* pTexture = SDL_CreateTexture(pRenderer, SDL_PIXELFORMAT_ARGB8888, 
             SDL_TEXTUREACCESS_STREAMING, g_kRenderWidth, g_kRenderHeight);
 
-        if (e(!pTexture, "Failed to create Back Buffer Texture\n"));
+        (e(!pTexture, "Failed to create Back Buffer Texture\n"));
 
         return pTexture;
     }

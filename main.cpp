@@ -28,8 +28,8 @@ bool ProcessInput(int *mouseX, int* mouseY)
         switch (event.type)
         {
         case SDL_MOUSEMOTION:
-            *mouseX = floor(event.button.x / (g_kWindowWidth / g_kRenderWidth));
-            *mouseY = floor(event.button.y / (g_kWindowHeight / g_kRenderHeight));
+            *mouseX = (int)floor(event.button.x / (g_kWindowWidth / g_kRenderWidth));
+            *mouseY = (int)floor(event.button.y / (g_kWindowHeight / g_kRenderHeight));
             break;
             // Terminate application if a key is pressed or if the user closes the window
         
@@ -106,7 +106,7 @@ int main()
     // Time
     Uint64 NOW = SDL_GetPerformanceCounter();
     Uint64 LAST = 0;
-    double deltaTime = 0;
+    float deltaTime = 0;
 
     while (running)
     {
@@ -121,6 +121,11 @@ int main()
         {
             // Animation update
             // Physics update
+            World.Step(deltaTime, g_kVelocityIterations, g_kPositionIterations);
+            b2Vec2 position = body->GetPosition();
+            float angle = body->GetAngle();
+            printf("%4.2f %4.2f %4.2f\n", position.x, position.y, angle);
+
             // Input
             running = ProcessInput(&mouseX, &mouseY);
             // Gamelogic
@@ -133,7 +138,7 @@ int main()
 
             LAST = NOW;
             NOW = SDL_GetPerformanceCounter();
-            deltaTime = (double)((NOW - LAST)*1000 / (double)SDL_GetPerformanceFrequency() );
+            deltaTime = (float)((NOW - LAST)*1000 / (float)SDL_GetPerformanceFrequency() );
 
             // Rendering
             SDL_RenderClear(pRenderer);

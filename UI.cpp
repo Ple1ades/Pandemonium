@@ -9,7 +9,7 @@ public:
         spriteSizes[spriteName] = getSpriteSize(sprites[spriteName]);
         SDL_FreeSurface(temp);
     }
-    void drawSprite(const char * spriteName, float x, float y, SDL_Renderer * renderer){
+    void drawSprite(const char * spriteName, int x, int y, SDL_Renderer * renderer){
         SDL_Rect position;
         position.x = x;
         position.y = y;

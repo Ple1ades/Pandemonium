@@ -4,10 +4,10 @@
 #include <iostream>
 #include <cmath>
 // https://github.com/Auburn/FastNoiseLite/blob/master/Cpp/README.md
-#include <FastNoiseLite/FastNoiseLite.h>
+#include "FastNoiseLite/FastNoiseLite.h"
 #include <box2d/box2d.h>
 #include <string>
-#include <SDL.h>
+#include <sdl2/SDL.h>
 #include <map>
 #include <vector>
 #include <variant>

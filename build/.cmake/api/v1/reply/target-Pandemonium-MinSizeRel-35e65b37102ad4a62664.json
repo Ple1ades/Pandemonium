@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Release/Pandemonium.exe"
+			"path" : "MinSizeRel/Pandemonium.exe"
 		},
 		{
-			"path" : "Release/Pandemonium.pdb"
+			"path" : "MinSizeRel/Pandemonium.pdb"
 		}
 	],
 	"backtrace" : 2,
@@ -51,7 +51,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 12,
+				"line" : 14,
 				"parent" : 0
 			},
 			{
@@ -63,7 +63,7 @@
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 21,
+				"line" : 23,
 				"parent" : 0
 			}
 		]
@@ -74,7 +74,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG"
 				},
 				{
 					"fragment" : "-std:c++17"
@@ -115,7 +115,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG",
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG",
 				"role" : "flags"
 			},
 			{
@@ -135,6 +135,19 @@
 			{
 				"backtrace" : 4,
 				"fragment" : "SDL2.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "C:\\Pleiades\\vcpkg\\installed\\x64-windows\\lib\\glew32.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "opengl32.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "glu32.lib",
 				"role" : "libraries"
 			},
 			{

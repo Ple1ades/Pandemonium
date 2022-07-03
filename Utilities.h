@@ -7,7 +7,11 @@
 #include "FastNoiseLite/FastNoiseLite.h"
 #include <box2d/box2d.h>
 #include <string>
-#include <sdl2/SDL.h>
+#include <SDL2/SDL.h>
+#include <gl\glew.h>
+#include <SDL2/SDL_opengl.h>
+#include <gl\GLU.h>
+
 #include <map>
 #include <vector>
 #include <variant>
@@ -33,11 +37,6 @@ int32_t e(int32_t result, std::string errorMessage)
 		std::cout << errorMessage;
 
 	return result;
-}
-
-inline uint32_t ARGB(uint32_t red, uint32_t green, uint32_t blue, uint32_t alpha)
-{
-	return (alpha << 24) | (red << 16) | (green << 8) | blue;
 }
 
 

@@ -252,6 +252,9 @@ DART_TESTING_TIMEOUT:STRING=1500
 //Path to a program.
 GITCOMMAND:FILEPATH=C:/Program Files/Git/cmd/git.exe
 
+//The directory containing a CMake configuration file for GLEW.
+GLEW_DIR:PATH=C:/Pleiades/vcpkg/installed/x64-windows/share/glew
+
 //Command to build the project
 MAKECOMMAND:STRING="C:\Program Files\CMake\bin\cmake.exe" --build . --config "${CTEST_CONFIGURATION_TYPE}"
 
@@ -269,6 +272,9 @@ Pandemonium_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 Pandemonium_SOURCE_DIR:STATIC=C:/Pleiades/Pandemonium
+
+//The directory containing a CMake configuration file for SDL2.
+SDL2_DIR:PATH=C:/Pleiades/vcpkg/installed/x64-windows/share/sdl2
 
 //Name of the computer/site where compile is being run
 SITE:STRING=JadonPredator

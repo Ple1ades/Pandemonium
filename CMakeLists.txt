@@ -9,8 +9,10 @@ LINK_DIRECTORIES(
 )
 add_executable(Pandemonium main.cpp)
 find_package(box2d CONFIG REQUIRED)
+find_package(GLEW REQUIRED)
+find_package(SDL2 CONFIG REQUIRED)
 target_link_libraries(Pandemonium PRIVATE
-    box2d::box2d SDL2
+    box2d::box2d SDL2 GLEW::GLEW 
 )
 include(CTest)
 enable_testing()

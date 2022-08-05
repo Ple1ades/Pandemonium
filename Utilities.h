@@ -1,16 +1,26 @@
 #pragma once
+#ifndef UTILITIES_H
+#define UTILITIES_H
+
 #include <cstdint>
 #include <string>
 #include <iostream>
 #include <cmath>
 // https://github.com/Auburn/FastNoiseLite/blob/master/Cpp/README.md
-#include "FastNoiseLite/FastNoiseLite.h"
+#include "Includes/FastNoiseLite/FastNoiseLite.h"
 #include <box2d/box2d.h>
 #include <string>
-#include <SDL2/SDL.h>
-#include <gl\glew.h>
-#include <SDL2/SDL_opengl.h>
-#include <gl\GLU.h>
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
+#include <string>
+#include <fstream>
+#include <sstream>
+#define STB_IMAGE_IMPLEMENTATION
+#include "Includes/std_image.h"
 
 #include <map>
 #include <vector>
@@ -29,7 +39,18 @@ constexpr static const int32_t g_kPositionIterations      = 2;
 
 constexpr static const char* g_kWindowTitle =             "PixelPusher";
 
-
+struct Texture {
+    unsigned int texture;
+    int width, height, nrChannels;
+};
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+    glViewport(0, 0, width, height);
+}
+static void glfwError(int id, const char* description)
+{
+    std::cout << description << std::endl;
+}
 
 int32_t e(int32_t result, std::string errorMessage)
 {
@@ -80,3 +101,4 @@ class Vector3{
         z = _z;
     }
 };
+#endif

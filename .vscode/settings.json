@@ -46,7 +46,11 @@
         "map": "cpp",
         "vector": "cpp",
         "variant": "cpp",
-        "fastnoiselite.h": "c"
+        "fastnoiselite.h": "c",
+        "algorithm": "cpp",
+        "xtree": "cpp",
+        "fstream": "cpp",
+        "sstream": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }

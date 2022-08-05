@@ -8,12 +8,17 @@ C:/Pleiades/vcpkg/installed/x64-windows/share/box2d/box2dConfig-debug.cmake
 C:/Pleiades/vcpkg/installed/x64-windows/share/box2d/box2dConfig-release.cmake
 C:/Pleiades/vcpkg/installed/x64-windows/share/box2d/box2dConfig.cmake
 C:/Pleiades/vcpkg/installed/x64-windows/share/box2d/box2dConfigVersion.cmake
-C:/Pleiades/vcpkg/installed/x64-windows/share/glew/CopyImportedTargetProperties.cmake
-C:/Pleiades/vcpkg/installed/x64-windows/share/glew/glew-config.cmake
-C:/Pleiades/vcpkg/installed/x64-windows/share/glew/glew-targets-debug.cmake
-C:/Pleiades/vcpkg/installed/x64-windows/share/glew/glew-targets-release.cmake
-C:/Pleiades/vcpkg/installed/x64-windows/share/glew/glew-targets.cmake
-C:/Pleiades/vcpkg/installed/x64-windows/share/glew/vcpkg-cmake-wrapper.cmake
+C:/Pleiades/vcpkg/installed/x64-windows/share/glad/gladConfig.cmake
+C:/Pleiades/vcpkg/installed/x64-windows/share/glad/gladConfigVersion.cmake
+C:/Pleiades/vcpkg/installed/x64-windows/share/glad/gladTargets-debug.cmake
+C:/Pleiades/vcpkg/installed/x64-windows/share/glad/gladTargets-release.cmake
+C:/Pleiades/vcpkg/installed/x64-windows/share/glad/gladTargets.cmake
+C:/Pleiades/vcpkg/installed/x64-windows/share/glfw3/glfw3Config.cmake
+C:/Pleiades/vcpkg/installed/x64-windows/share/glfw3/glfw3ConfigVersion.cmake
+C:/Pleiades/vcpkg/installed/x64-windows/share/glfw3/glfw3Targets-debug.cmake
+C:/Pleiades/vcpkg/installed/x64-windows/share/glfw3/glfw3Targets-release.cmake
+C:/Pleiades/vcpkg/installed/x64-windows/share/glfw3/glfw3Targets.cmake
+C:/Pleiades/vcpkg/installed/x64-windows/share/glm/glm-config.cmake
 C:/Pleiades/vcpkg/installed/x64-windows/share/sdl2/SDL2Config.cmake
 C:/Pleiades/vcpkg/installed/x64-windows/share/sdl2/SDL2ConfigVersion.cmake
 C:/Pleiades/vcpkg/installed/x64-windows/share/sdl2/SDL2Targets-debug.cmake
@@ -48,5 +53,4 @@ C:/Program Files/CMake/share/cmake-3.24/Modules/Platform/Windows-MSVC-CXX.cmake
 C:/Program Files/CMake/share/cmake-3.24/Modules/Platform/Windows-MSVC.cmake
 C:/Program Files/CMake/share/cmake-3.24/Modules/Platform/Windows.cmake
 C:/Program Files/CMake/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake
-C:/Program Files/CMake/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake
 C:/Program Files/CMake/share/cmake-3.24/Templates/CPackConfig.cmake.in

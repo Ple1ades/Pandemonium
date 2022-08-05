@@ -18,7 +18,7 @@
 BUILD_TESTING:BOOL=ON
 
 //Path to a program.
-CMAKE_AR:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/lib.exe
+CMAKE_AR:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx64/x64/lib.exe
 
 //Semicolon separated list of supported configuration types, only
 // supports Debug, Release, MinSizeRel, and RelWithDebInfo, anything
@@ -86,7 +86,7 @@ CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=C:/Pleiades/Pandemonium/build/CMakeFiles
 CMAKE_INSTALL_PREFIX:PATH=C:/Program Files/Pandemonium
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/link.exe
+CMAKE_LINKER:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx64/x64/link.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -252,9 +252,6 @@ DART_TESTING_TIMEOUT:STRING=1500
 //Path to a program.
 GITCOMMAND:FILEPATH=C:/Program Files/Git/cmd/git.exe
 
-//The directory containing a CMake configuration file for GLEW.
-GLEW_DIR:PATH=C:/Pleiades/vcpkg/installed/x64-windows/share/glew
-
 //Command to build the project
 MAKECOMMAND:STRING="C:\Program Files\CMake\bin\cmake.exe" --build . --config "${CTEST_CONFIGURATION_TYPE}"
 
@@ -328,6 +325,15 @@ _VCPKG_INSTALLED_DIR:PATH=C:/Pleiades/vcpkg/installed
 //The directory containing a CMake configuration file for box2d.
 box2d_DIR:PATH=C:/Pleiades/vcpkg/installed/x64-windows/share/box2d
 
+//The directory containing a CMake configuration file for glad.
+glad_DIR:PATH=C:/Pleiades/vcpkg/installed/x64-windows/share/glad
+
+//The directory containing a CMake configuration file for glfw3.
+glfw3_DIR:PATH=C:/Pleiades/vcpkg/installed/x64-windows/share/glfw3
+
+//The directory containing a CMake configuration file for glm.
+glm_DIR:PATH=C:/Pleiades/vcpkg/installed/x64-windows/share/glm
+
 
 ########################
 # INTERNAL cache entries
@@ -390,9 +396,9 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
-CMAKE_GENERATOR:INTERNAL=Visual Studio 16 2019
+CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022
 //Generator instance identifier.
-CMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community
+CMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files/Microsoft Visual Studio/2022/Community
 //Name of generator platform.
 CMAKE_GENERATOR_PLATFORM:INTERNAL=x64
 //Name of generator toolset.

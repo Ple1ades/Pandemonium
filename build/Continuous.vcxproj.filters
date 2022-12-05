@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Pleiades\Pandemonium\build\CMakeFiles\64f2846cba97e7afffdd6b46c1b04526\Continuous.rule">
+    <CustomBuild Include="D:\Game\Pandemonium\build\CMakeFiles\fe4a0a8c7d45b8bd1984560bba3e7a2d\Continuous.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Pleiades\Pandemonium\CMakeLists.txt" />
+    <CustomBuild Include="D:\Game\Pandemonium\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Pleiades\Pandemonium\build\CMakeFiles\Continuous" />
+    <None Include="D:\Game\Pandemonium\build\CMakeFiles\Continuous" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{41891130-1D07-3324-9D4D-7CF78377AC78}</UniqueIdentifier>
+      <UniqueIdentifier>{B80D423A-7AF6-3DF8-8F86-8BD155911AE8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

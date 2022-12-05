@@ -1,11 +1,12 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(Pandemonium VERSION 0.1.0)
+list(APPEND CMAKE_PREFIX_PATH "D:/vcpkg/installed/x64-windows/share/")
 INCLUDE_DIRECTORIES(
-    C:/Pleiades/vcpkg/installed/x64-windows/include/
+    D:/vcpkg/installed/x64-windows/include/
 )
 
 LINK_DIRECTORIES(
-    C:/Pleiades/vcpkg/installed/x64-windows/lib/
+    D:/vcpkg/installed/x64-windows/lib/
 )
 add_executable(Pandemonium main.cpp)
 find_package(box2d CONFIG REQUIRED)
@@ -14,8 +15,9 @@ find_package(glfw3 CONFIG REQUIRED)
 find_package(glad CONFIG REQUIRED)
 find_package(SDL2 CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
+find_package(GLEW REQUIRED)
 target_link_libraries(Pandemonium PRIVATE
-    box2d::box2d SDL2 glfw3dll glad::glad # GLEW::GLEW
+    box2d::box2d SDL2 glfw3dll glad::glad GLEW::GLEW
 )
 include(CTest)
 enable_testing()

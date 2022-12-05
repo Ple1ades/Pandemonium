@@ -1,140 +1,163 @@
 
-#include "MapGen.cpp"
+//#include "MapGen.cpp"
 #include "Render.h"
 #include "Pandemonium.cpp"
 #include "Shader.h"
-#undef main
+#include "Objects.h"
 
 #include "Utilities.h"
 
+GLFWwindow* window;
+
+
+
+Object objects[Constants::OBJECT_COUNT];
+int16 vertices[Constants::OBJECT_COUNT * 12];
+float uvs[Constants::OBJECT_COUNT * 12];
+
+void updateVertices(int i){
+    // Top rights
+    vertices[i * 12] = (objects)[i].x + (objects)[i].texture.width;
+    vertices[i * 12 + 1] = (objects)[i].y;
+    // Bottom right
+    vertices[i * 12 + 2] = (objects)[i].x + (objects)[i].texture.width;
+    vertices[i * 12 + 3] = (objects)[i].y + (objects)[i].texture.height;
+    // Top  left
+    vertices[i * 12 + 4] = (objects)[i].x;
+    vertices[i * 12 + 5] = (objects)[i].y;
+    // Bottom right
+    vertices[i * 12 + 6] = (objects)[i].x + (objects)[i].texture.width;
+    vertices[i * 12 + 7] = (objects)[i].y + (objects)[i].texture.height;
+    
+    //Bottom left
+    vertices[i * 12 + 8] = (objects)[i].x;
+    vertices[i * 12 + 9] = (objects)[i].y + (objects)[i].texture.height;
+    
+    //Top left
+    vertices[i * 12 + 10] = (objects)[i].x;
+    vertices[i * 12 + 11] = (objects)[i].y;
+}
+void update(){
+    for (uint32 i = 0; i < Constants::OBJECT_COUNT; i++){
+        objects[i].x = rand() % (Constants::WINDOW_WIDTH - 5);
+        objects[i].y = rand() % (Constants::WINDOW_HEIGHT - 5);
+        updateVertices(i);
+        
+    }
+
+
+    //std::cout<<vertices[0]/1920.0f<<" "<<vertices[1]/1080.0f<<" "<<
+    //    vertices[2]/1920.0f<<" "<<vertices[3]/1080.0f<<" "<<
+
+    //    vertices[4]/1920.0f<<" "<<vertices[5]/1080.0f<<" "<<
+    //    vertices[6]/1920.0f<<" "<<vertices[7]/1080.0f<<" "<<
+    //    vertices[8]/1920.0f<<" "<<vertices[9]/1080.0f<<" "<<
+    //    vertices[10]/1920.0f<<" "<<vertices[11]/1080.0f<<std::endl;;
+    glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vertices), vertices);
+}
+
+void render(){
+    glClearColor(0.0f, 0.0f, 0.4f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+    
+    glDrawArrays(GL_TRIANGLES, 0, Constants::OBJECT_COUNT * 6);
+    glfwSwapBuffers(window);
+}
 
 int main()
 {
-    // Game Loop
-    bool running = true;
-    bool firstFrame = true;
-    // Physics
-    b2Vec2 Gravity(0.0f, 9.8f);
-    b2World World(Gravity);
-    b2BodyDef groundBodyDef;
-    groundBodyDef.position.Set(0.0f, -10.0f);
-    b2Body* groundBody = World.CreateBody(&groundBodyDef);
-    b2PolygonShape groundBox;
-    groundBox.SetAsBox(50.0f, 10.0f);
-    groundBody -> CreateFixture(&groundBox, 0.0f);
 
-    b2BodyDef bodyDef;
-    bodyDef.type = b2_dynamicBody;
-    bodyDef.position.Set(0.0f, 4.0f);
-    b2Body* body = World.CreateBody(&bodyDef);
-    b2PolygonShape dynamicBox;
-    dynamicBox.SetAsBox(1.0f, 1.0f);
-    b2FixtureDef fixtureDef;
-    fixtureDef.shape = &dynamicBox;
-    fixtureDef.density = 1.0f;
-    fixtureDef.friction = 0.3f;
-    body -> CreateFixture(&fixtureDef);
-    
+    srand((unsigned int)time(0));
+    bool running=true;
+    bool firstFrame=true;
     // Graphics
-    Renderer render;
-    GLFWwindow * window = render.initGLFW();
-    
+    Renderer renderer;
+    window = renderer.initGLFW();
+
     Shader shader("Shaders/vertex.glsl", "Shaders/fragment.glsl");
 
-    float vertices[] = {
-        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
-        0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
-        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
-
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
-        -0.5f,  0.5f,  0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-
-        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        -0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-
-        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        0.5f, -0.5f, -0.5f,  1.0f, 1.0f,
-        0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-        0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        -0.5f,  0.5f,  0.5f,  0.0f, 0.0f,
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
-    };
-    unsigned int indices[] = {
-        0, 1, 3,
-        1, 2, 3
+    Texture textures[] = { 
+        Texture(GL_REPEAT, GL_REPEAT, GL_NEAREST, GL_NEAREST, "./wall.jpg", GL_RGB, 1.0, 0.0, 0.0, 1.0), 
+        Texture(GL_REPEAT, GL_REPEAT, GL_NEAREST, GL_NEAREST, "./awesomeface.png", GL_RGBA, 1.0, 0.0, 0.0, 1.0)
     };
 
-    unsigned int VBO, VAO, EBO;
+
+
+    for (uint32 i = 0; i < Constants::OBJECT_COUNT; i++){
+        Texture t = textures[0];
+
+        objects[i] = {
+            (int16)(rand() % (Constants::WINDOW_WIDTH - t.width)),
+            (int16)(rand() % (Constants::WINDOW_HEIGHT - t.height)),
+            t
+        };
+        updateVertices(i);
+        objects[i].updateUVs((uvs), (objects), i);
+    }
+
+    unsigned int VBO, VAO, UBO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
-    glGenBuffers(1, &EBO);
-
-
+    glGenBuffers(1, &UBO);
     glBindVertexArray(VAO);
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_DYNAMIC_DRAW);
+    glVertexAttribPointer(0, 2, GL_SHORT, GL_FALSE, 2 * sizeof(int16), 0);
 
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
-    // Position
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, UBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(uvs), uvs, GL_STATIC_DRAW);
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)(0));
+
     // Texture choord
-    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
+
+    glEnableVertexAttribArray(0);
     glEnableVertexAttribArray(1);
 
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
     // Textures
     stbi_set_flip_vertically_on_load(true);
 
-    Texture texture = render.generateTexture(GL_REPEAT, GL_REPEAT, GL_LINEAR, GL_LINEAR, "./wall.jpg", GL_RGB);
-    Texture texture2 = render.generateTexture(GL_REPEAT, GL_REPEAT, GL_LINEAR, GL_LINEAR, "./awesomeface.png", GL_RGBA);
 
     shader.use();
-    shader.setInt("texture1", 0);
-    shader.setInt("texture2", 1);
-
-    glm::mat4 projection = glm::mat4(1.0f);
-    projection = glm::perspective(glm::radians(45.0f), (float)g_kWindowWidth/ (float)g_kWindowHeight, 0.1f, 100.0f);
-    shader.setMat4("projection", projection);
-
-    glm::vec3 cameraPos   = glm::vec3(0.0f, 0.0f,  3.0f);
-    glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
-    glm::vec3 cameraUp    = glm::vec3(0.0f, 1.0f,  0.0f);
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, textures[0].texture);
+    glBindVertexArray(VAO);
 
     // Time
-    float deltaTime = 0.0f;
-    float lastFrame = 0.5f;
+    float time = 0.0f;
+    float deltaTime = 0.1f;
+    float currentTime = (float)glfwGetTime();
+    float lastPrinted = currentTime;
+    float accumulator = 0.0f;
+    
 
     // Game
+
     Pandemonium pandemonium;
 
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    for (uint32 i = 0; i < Constants::OBJECT_COUNT; i++){
+        objects[i].x = rand() % (Constants::WINDOW_WIDTH - 5);
+        objects[i].y = rand() % (Constants::WINDOW_HEIGHT - 5);
+        updateVertices(i);
+        
+    }
+
+
+
+    //std::cout<<vertices[0]/1920.0f<<" "<<vertices[1]/1080.0f<<" "<<
+    //    vertices[2]/1920.0f<<" "<<vertices[3]/1080.0f<<" "<<
+
+    //    vertices[4]/1920.0f<<" "<<vertices[5]/1080.0f<<" "<<
+    //    vertices[6]/1920.0f<<" "<<vertices[7]/1080.0f<<" "<<
+    //    vertices[8]/1920.0f<<" "<<vertices[9]/1080.0f<<" "<<
+    //    vertices[10]/1920.0f<<" "<<vertices[11]/1080.0f<<std::endl;;
+    glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vertices), vertices);
+    std::cout<<glGetError()<<std::endl;
+
+
 
 
     while (running)
@@ -150,64 +173,41 @@ int main()
         else
         {
             // Time
-            float currentFrame = (float)glfwGetTime();
-            deltaTime = currentFrame - lastFrame;
-            lastFrame = currentFrame;
+            float newTime = (float)glfwGetTime();
+            float frameTime = newTime - currentTime;
+            currentTime = newTime;
+            
             // Animation update
-            // Physics update
-            World.Step(deltaTime, g_kVelocityIterations, g_kPositionIterations);
-            b2Vec2 position = body->GetPosition();
-            float angle = body->GetAngle();
+
             // printf("%4.2f %4.2f %4.2f\n", position.x, position.y, angle);
 
             // Input
-            pandemonium.ProcessInput(window, &cameraPos, &cameraFront, &cameraUp, &deltaTime);
+            pandemonium.ProcessInput(window, &deltaTime);
             // Gamelogic
-
+            accumulator += frameTime;
 
             // Rendering
+
+
             running = running && !glfwWindowShouldClose(window);
-            glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-            glActiveTexture(GL_TEXTURE0);
-            glBindTexture(GL_TEXTURE_2D, texture.texture);
-            glActiveTexture(GL_TEXTURE1);
-            glBindTexture(GL_TEXTURE_2D, texture2.texture);
-
-            glm::mat4 transform = glm::mat4(1.0f);
-            transform = glm::translate(transform, glm::vec3(0.0f, 0.0f, 0.0f));
-            transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
-            
-            glm::mat4 model = glm::mat4(1.0f);
-            glm::mat4 view = glm::mat4(1.0f);
-
-            view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
-            // view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f)); 
-            model = glm::rotate(model, (float)5  * glm::radians(50.0f) * (float)glfwGetTime(), glm::vec3(1.0f, 0.3f, 0.5f));  
-            
-            // note that we're translating the scene in the reverse direction of where we want to move
-
-
-
-            shader.use();
-            shader.setMat4("model", model);
-            shader.setMat4("view", view);
-
-
-
-            glBindVertexArray(VAO);
-            glDrawArrays(GL_TRIANGLES, 0, 36);
-            // glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-
-            glfwSwapBuffers(window);
-            glfwPollEvents();    
+            while (accumulator >= deltaTime)
+            {
+                glfwPollEvents();
+                
+                update();
+                accumulator -= deltaTime;
+                time += deltaTime;
+            }
+            render();
         }
     }
 
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
-
+    glDeleteBuffers(1, &UBO);
+    for (Texture i : textures){
+        glDeleteTextures(1, &i.texture);
+    }
     glfwTerminate();
     return 0;
-}
+}    

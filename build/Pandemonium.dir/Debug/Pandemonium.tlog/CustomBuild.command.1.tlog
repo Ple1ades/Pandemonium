@@ -1,6 +1,6 @@
-^C:\PLEIADES\PANDEMONIUM\CMAKELISTS.TXT
+^D:\GAME\PANDEMONIUM\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Pleiades/Pandemonium -BC:/Pleiades/Pandemonium/build --check-stamp-file C:/Pleiades/Pandemonium/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Game/Pandemonium -BD:/Game/Pandemonium/build --check-stamp-file D:/Game/Pandemonium/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

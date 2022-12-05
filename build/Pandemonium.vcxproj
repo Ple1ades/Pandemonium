@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
   </PropertyGroup>
@@ -22,9 +22,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7C325ECD-8CAF-3569-A86D-F59BD5B13ADF}</ProjectGuid>
+    <ProjectGuid>{D824F147-F596-335D-853A-D5787A55092F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <VcpkgEnabled>false</VcpkgEnabled>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>Pandemonium</ProjectName>
@@ -34,51 +33,51 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="PropertySheets">
-    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Pleiades\Pandemonium\build\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Game\Pandemonium\build\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pandemonium.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pandemonium</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Pleiades\Pandemonium\build\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Game\Pandemonium\build\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pandemonium.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pandemonium</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Pleiades\Pandemonium\build\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Game\Pandemonium\build\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Pandemonium.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Pandemonium</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Pleiades\Pandemonium\build\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Game\Pandemonium\build\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Pandemonium.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Pandemonium</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
@@ -87,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Pleiades/vcpkg/installed/x64-windows/include"</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/vcpkg/installed/x64-windows/include"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -106,36 +105,24 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Pleiades\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Pleiades\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PostBuildEvent>
-      <Message></Message>
-      <Command>setlocal
-C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Pleiades/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Pleiades/Pandemonium/build/Debug/Pandemonium.exe -installedDir C:/Pleiades/vcpkg/installed/x64-windows/debug/bin -OutVariable out
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>C:\Pleiades\vcpkg\installed\x64-windows\debug\lib\box2d.lib;SDL2.lib;glfw3dll.lib;C:\Pleiades\vcpkg\installed\x64-windows\debug\lib\glad.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:/Pleiades/vcpkg/installed/x64-windows/lib;C:/Pleiades/vcpkg/installed/x64-windows/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>D:\vcpkg\installed\x64-windows\debug\lib\box2d.lib;SDL2.lib;glfw3dll.lib;D:\vcpkg\installed\x64-windows\debug\lib\glad.lib;D:\vcpkg\installed\x64-windows\debug\lib\glew32d.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/vcpkg/installed/x64-windows/lib;D:/vcpkg/installed/x64-windows/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Pleiades/Pandemonium/build/Debug/Pandemonium.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Pleiades/Pandemonium/build/Debug/Pandemonium.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/Game/Pandemonium/build/Debug/Pandemonium.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Game/Pandemonium/build/Debug/Pandemonium.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -144,7 +131,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Pleiades/vcpkg/installed/x64-windows/include"</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/vcpkg/installed/x64-windows/include"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
@@ -163,36 +150,24 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Pleiades\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Pleiades\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PostBuildEvent>
-      <Message></Message>
-      <Command>setlocal
-C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Pleiades/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Pleiades/Pandemonium/build/Release/Pandemonium.exe -installedDir C:/Pleiades/vcpkg/installed/x64-windows/bin -OutVariable out
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>C:\Pleiades\vcpkg\installed\x64-windows\lib\box2d.lib;SDL2.lib;glfw3dll.lib;C:\Pleiades\vcpkg\installed\x64-windows\lib\glad.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:/Pleiades/vcpkg/installed/x64-windows/lib;C:/Pleiades/vcpkg/installed/x64-windows/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>D:\vcpkg\installed\x64-windows\lib\box2d.lib;SDL2.lib;glfw3dll.lib;D:\vcpkg\installed\x64-windows\lib\glad.lib;D:\vcpkg\installed\x64-windows\lib\glew32.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/vcpkg/installed/x64-windows/lib;D:/vcpkg/installed/x64-windows/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Pleiades/Pandemonium/build/Release/Pandemonium.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Pleiades/Pandemonium/build/Release/Pandemonium.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/Game/Pandemonium/build/Release/Pandemonium.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Game/Pandemonium/build/Release/Pandemonium.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -201,7 +176,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Pleiades/vcpkg/installed/x64-windows/include"</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/vcpkg/installed/x64-windows/include"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
@@ -220,36 +195,24 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Pleiades\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Pleiades\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PostBuildEvent>
-      <Message></Message>
-      <Command>setlocal
-C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Pleiades/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Pleiades/Pandemonium/build/MinSizeRel/Pandemonium.exe -installedDir C:/Pleiades/vcpkg/installed/x64-windows/bin -OutVariable out
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>C:\Pleiades\vcpkg\installed\x64-windows\lib\box2d.lib;SDL2.lib;glfw3dll.lib;C:\Pleiades\vcpkg\installed\x64-windows\lib\glad.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:/Pleiades/vcpkg/installed/x64-windows/lib;C:/Pleiades/vcpkg/installed/x64-windows/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>D:\vcpkg\installed\x64-windows\debug\lib\box2d.lib;SDL2.lib;glfw3dll.lib;D:\vcpkg\installed\x64-windows\debug\lib\glad.lib;D:\vcpkg\installed\x64-windows\debug\lib\glew32d.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/vcpkg/installed/x64-windows/lib;D:/vcpkg/installed/x64-windows/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Pleiades/Pandemonium/build/MinSizeRel/Pandemonium.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Pleiades/Pandemonium/build/MinSizeRel/Pandemonium.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/Game/Pandemonium/build/MinSizeRel/Pandemonium.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Game/Pandemonium/build/MinSizeRel/Pandemonium.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -258,7 +221,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Pleiades/vcpkg/installed/x64-windows/include"</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/vcpkg/installed/x64-windows/include"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -276,36 +239,24 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Pleiades\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Pleiades\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PostBuildEvent>
-      <Message></Message>
-      <Command>setlocal
-C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Pleiades/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Pleiades/Pandemonium/build/RelWithDebInfo/Pandemonium.exe -installedDir C:/Pleiades/vcpkg/installed/x64-windows/bin -OutVariable out
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>C:\Pleiades\vcpkg\installed\x64-windows\lib\box2d.lib;SDL2.lib;glfw3dll.lib;C:\Pleiades\vcpkg\installed\x64-windows\lib\glad.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:/Pleiades/vcpkg/installed/x64-windows/lib;C:/Pleiades/vcpkg/installed/x64-windows/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>D:\vcpkg\installed\x64-windows\debug\lib\box2d.lib;SDL2.lib;glfw3dll.lib;D:\vcpkg\installed\x64-windows\debug\lib\glad.lib;D:\vcpkg\installed\x64-windows\debug\lib\glew32d.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/vcpkg/installed/x64-windows/lib;D:/vcpkg/installed/x64-windows/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Pleiades/Pandemonium/build/RelWithDebInfo/Pandemonium.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Pleiades/Pandemonium/build/RelWithDebInfo/Pandemonium.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/Game/Pandemonium/build/RelWithDebInfo/Pandemonium.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Game/Pandemonium/build/RelWithDebInfo/Pandemonium.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -313,11 +264,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Pleiades\Pandemonium\CMakeLists.txt">
+    <CustomBuild Include="D:\Game\Pandemonium\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Pleiades/Pandemonium/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Game/Pandemonium/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Pleiades/Pandemonium -BC:/Pleiades/Pandemonium/build --check-stamp-file C:/Pleiades/Pandemonium/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Game/Pandemonium -BD:/Game/Pandemonium/build --check-stamp-file D:/Game/Pandemonium/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -325,12 +276,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Pleiades\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeCCompiler.cmake;C:\Pleiades\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeCXXCompiler.cmake;C:\Pleiades\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeRCCompiler.cmake;C:\Pleiades\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeSystem.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\box2d\box2dConfig-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\box2d\box2dConfig-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\box2d\box2dConfig.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\box2d\box2dConfigVersion.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladConfig.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladConfigVersion.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladTargets-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladTargets-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladTargets.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glm\glm-config.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2Config.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2ConfigVersion.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets.cmake;C:\Pleiades\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.24\Templates\CPackConfig.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Pleiades\Pandemonium\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.24\Modules\FindGLEW.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.24\Templates\CPackConfig.cmake.in;D:\Game\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeCCompiler.cmake;D:\Game\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeCXXCompiler.cmake;D:\Game\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeRCCompiler.cmake;D:\Game\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeSystem.cmake;D:\vcpkg\installed\x64-windows\share\box2d\box2dConfig-debug.cmake;D:\vcpkg\installed\x64-windows\share\box2d\box2dConfig-release.cmake;D:\vcpkg\installed\x64-windows\share\box2d\box2dConfig.cmake;D:\vcpkg\installed\x64-windows\share\box2d\box2dConfigVersion.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladConfig.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladConfigVersion.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladTargets-debug.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladTargets-release.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladTargets.cmake;D:\vcpkg\installed\x64-windows\share\glew\CopyImportedTargetProperties.cmake;D:\vcpkg\installed\x64-windows\share\glew\glew-config.cmake;D:\vcpkg\installed\x64-windows\share\glew\glew-targets-debug.cmake;D:\vcpkg\installed\x64-windows\share\glew\glew-targets-release.cmake;D:\vcpkg\installed\x64-windows\share\glew\glew-targets.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;D:\vcpkg\installed\x64-windows\share\glm\glm-config.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2Config.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2ConfigVersion.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-debug.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-release.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-debug.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-release.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Game\Pandemonium\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Pleiades/Pandemonium/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Game/Pandemonium/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Pleiades/Pandemonium -BC:/Pleiades/Pandemonium/build --check-stamp-file C:/Pleiades/Pandemonium/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Game/Pandemonium -BD:/Game/Pandemonium/build --check-stamp-file D:/Game/Pandemonium/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -338,12 +289,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Pleiades\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeCCompiler.cmake;C:\Pleiades\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeCXXCompiler.cmake;C:\Pleiades\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeRCCompiler.cmake;C:\Pleiades\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeSystem.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\box2d\box2dConfig-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\box2d\box2dConfig-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\box2d\box2dConfig.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\box2d\box2dConfigVersion.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladConfig.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladConfigVersion.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladTargets-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladTargets-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladTargets.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glm\glm-config.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2Config.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2ConfigVersion.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets.cmake;C:\Pleiades\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.24\Templates\CPackConfig.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Pleiades\Pandemonium\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.24\Modules\FindGLEW.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.24\Templates\CPackConfig.cmake.in;D:\Game\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeCCompiler.cmake;D:\Game\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeCXXCompiler.cmake;D:\Game\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeRCCompiler.cmake;D:\Game\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeSystem.cmake;D:\vcpkg\installed\x64-windows\share\box2d\box2dConfig-debug.cmake;D:\vcpkg\installed\x64-windows\share\box2d\box2dConfig-release.cmake;D:\vcpkg\installed\x64-windows\share\box2d\box2dConfig.cmake;D:\vcpkg\installed\x64-windows\share\box2d\box2dConfigVersion.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladConfig.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladConfigVersion.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladTargets-debug.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladTargets-release.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladTargets.cmake;D:\vcpkg\installed\x64-windows\share\glew\CopyImportedTargetProperties.cmake;D:\vcpkg\installed\x64-windows\share\glew\glew-config.cmake;D:\vcpkg\installed\x64-windows\share\glew\glew-targets-debug.cmake;D:\vcpkg\installed\x64-windows\share\glew\glew-targets-release.cmake;D:\vcpkg\installed\x64-windows\share\glew\glew-targets.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;D:\vcpkg\installed\x64-windows\share\glm\glm-config.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2Config.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2ConfigVersion.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-debug.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-release.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-debug.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-release.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Game\Pandemonium\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Pleiades/Pandemonium/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Game/Pandemonium/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Pleiades/Pandemonium -BC:/Pleiades/Pandemonium/build --check-stamp-file C:/Pleiades/Pandemonium/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Game/Pandemonium -BD:/Game/Pandemonium/build --check-stamp-file D:/Game/Pandemonium/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -351,12 +302,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Pleiades\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeCCompiler.cmake;C:\Pleiades\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeCXXCompiler.cmake;C:\Pleiades\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeRCCompiler.cmake;C:\Pleiades\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeSystem.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\box2d\box2dConfig-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\box2d\box2dConfig-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\box2d\box2dConfig.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\box2d\box2dConfigVersion.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladConfig.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladConfigVersion.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladTargets-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladTargets-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladTargets.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glm\glm-config.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2Config.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2ConfigVersion.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets.cmake;C:\Pleiades\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.24\Templates\CPackConfig.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Pleiades\Pandemonium\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.24\Modules\FindGLEW.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.24\Templates\CPackConfig.cmake.in;D:\Game\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeCCompiler.cmake;D:\Game\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeCXXCompiler.cmake;D:\Game\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeRCCompiler.cmake;D:\Game\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeSystem.cmake;D:\vcpkg\installed\x64-windows\share\box2d\box2dConfig-debug.cmake;D:\vcpkg\installed\x64-windows\share\box2d\box2dConfig-release.cmake;D:\vcpkg\installed\x64-windows\share\box2d\box2dConfig.cmake;D:\vcpkg\installed\x64-windows\share\box2d\box2dConfigVersion.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladConfig.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladConfigVersion.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladTargets-debug.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladTargets-release.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladTargets.cmake;D:\vcpkg\installed\x64-windows\share\glew\CopyImportedTargetProperties.cmake;D:\vcpkg\installed\x64-windows\share\glew\glew-config.cmake;D:\vcpkg\installed\x64-windows\share\glew\glew-targets-debug.cmake;D:\vcpkg\installed\x64-windows\share\glew\glew-targets-release.cmake;D:\vcpkg\installed\x64-windows\share\glew\glew-targets.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;D:\vcpkg\installed\x64-windows\share\glm\glm-config.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2Config.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2ConfigVersion.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-debug.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-release.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-debug.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-release.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Game\Pandemonium\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Pleiades/Pandemonium/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Game/Pandemonium/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Pleiades/Pandemonium -BC:/Pleiades/Pandemonium/build --check-stamp-file C:/Pleiades/Pandemonium/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Game/Pandemonium -BD:/Game/Pandemonium/build --check-stamp-file D:/Game/Pandemonium/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -364,17 +315,17 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Pleiades\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeCCompiler.cmake;C:\Pleiades\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeCXXCompiler.cmake;C:\Pleiades\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeRCCompiler.cmake;C:\Pleiades\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeSystem.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\box2d\box2dConfig-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\box2d\box2dConfig-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\box2d\box2dConfig.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\box2d\box2dConfigVersion.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladConfig.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladConfigVersion.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladTargets-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladTargets-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glad\gladTargets.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\glm\glm-config.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2Config.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2ConfigVersion.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-debug.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-release.cmake;C:\Pleiades\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets.cmake;C:\Pleiades\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.24\Templates\CPackConfig.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Pleiades\Pandemonium\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.24\Modules\FindGLEW.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.24\Templates\CPackConfig.cmake.in;D:\Game\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeCCompiler.cmake;D:\Game\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeCXXCompiler.cmake;D:\Game\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeRCCompiler.cmake;D:\Game\Pandemonium\build\CMakeFiles\3.24.0-rc2\CMakeSystem.cmake;D:\vcpkg\installed\x64-windows\share\box2d\box2dConfig-debug.cmake;D:\vcpkg\installed\x64-windows\share\box2d\box2dConfig-release.cmake;D:\vcpkg\installed\x64-windows\share\box2d\box2dConfig.cmake;D:\vcpkg\installed\x64-windows\share\box2d\box2dConfigVersion.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladConfig.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladConfigVersion.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladTargets-debug.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladTargets-release.cmake;D:\vcpkg\installed\x64-windows\share\glad\gladTargets.cmake;D:\vcpkg\installed\x64-windows\share\glew\CopyImportedTargetProperties.cmake;D:\vcpkg\installed\x64-windows\share\glew\glew-config.cmake;D:\vcpkg\installed\x64-windows\share\glew\glew-targets-debug.cmake;D:\vcpkg\installed\x64-windows\share\glew\glew-targets-release.cmake;D:\vcpkg\installed\x64-windows\share\glew\glew-targets.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;D:\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;D:\vcpkg\installed\x64-windows\share\glm\glm-config.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2Config.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2ConfigVersion.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-debug.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-release.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-debug.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-release.cmake;D:\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Game\Pandemonium\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Pleiades\Pandemonium\main.cpp" />
+    <ClCompile Include="D:\Game\Pandemonium\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Pleiades\Pandemonium\build\ZERO_CHECK.proj">
-      <Project>{0D4FAEAF-CA6A-3436-A3CB-AA805CEE5A4E}</Project>
+    <ProjectReference Include="D:\Game\Pandemonium\build\ZERO_CHECK.proj">
+      <Project>{AD5070BE-675A-3327-84AD-F2C8BA885BC6}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

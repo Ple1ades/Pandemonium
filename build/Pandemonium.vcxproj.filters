@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Pleiades\Pandemonium\main.cpp">
+    <ClCompile Include="D:\Game\Pandemonium\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Pleiades\Pandemonium\CMakeLists.txt" />
+    <CustomBuild Include="D:\Game\Pandemonium\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{8DD235D0-7AFA-33B1-B7A5-69F235A2E111}</UniqueIdentifier>
+      <UniqueIdentifier>{C3D6C19B-ACE7-3EF5-A7D4-49C64C9A33DA}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -6,11 +6,12 @@
 #include <string>
 #include <iostream>
 #include <cmath>
+#include <cstdlib>
 // https://github.com/Auburn/FastNoiseLite/blob/master/Cpp/README.md
 #include "Includes/FastNoiseLite/FastNoiseLite.h"
 #include <box2d/box2d.h>
 #include <string>
-#include <glad/glad.h>
+#include <gl/glew.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -26,31 +27,26 @@
 #include <vector>
 #include <variant>
 
+#include "Constants.h"
+
 #define CLAMP(x, upper, lower) (std::max(upper, std::min(x, lower)))
 
-constexpr static const int32_t g_kWindowWidth             = 1920;
-constexpr static const int32_t g_kWindowHeight            = 1080;
-constexpr static const int32_t g_kRenderWidth             = g_kWindowWidth / 2;
-constexpr static const int32_t g_kRenderHeight            = g_kWindowHeight / 2;
-constexpr static const int32_t g_kRenderDeviceFlags       = -1;
-constexpr static const int32_t g_kErrorOccurred           = -1;
-constexpr static const int32_t g_kVelocityIterations      = 6;
-constexpr static const int32_t g_kPositionIterations      = 2;
 
-constexpr static const char* g_kWindowTitle =             "PixelPusher";
 
-struct Texture {
-    unsigned int texture;
-    int width, height, nrChannels;
-};
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
+}
+void key_callback(GLFWwindow * window, int key, int32 scancode, int32 action, int32 mode){
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS){
+        glfwSetWindowShouldClose(window, GL_TRUE);
+    }
 }
 static void glfwError(int id, const char* description)
 {
     std::cout << description << std::endl;
 }
+
 
 int32_t e(int32_t result, std::string errorMessage)
 {

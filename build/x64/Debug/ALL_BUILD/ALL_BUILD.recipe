@@ -2,17 +2,17 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Pleiades\Pandemonium\build\Debug\Pandemonium.exe</FullPath>
+      <FullPath>D:\Game\Pandemonium\build\Debug\Pandemonium.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Pleiades\Pandemonium\build\x64\Debug\ALL_BUILD</FullPath>
+      <FullPath>D:\Game\Pandemonium\build\x64\Debug\ALL_BUILD</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
   <SatelliteDlls />
   <NonRecipeFileRefs>
     <NonRecipeFileRef>
-      <FullPath>C:\Pleiades\Pandemonium\build\ZERO_CHECK.proj</FullPath>
+      <FullPath>D:\Game\Pandemonium\build\ZERO_CHECK.proj</FullPath>
     </NonRecipeFileRef>
   </NonRecipeFileRefs>
 </Project>
